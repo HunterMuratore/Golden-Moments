@@ -33,9 +33,9 @@ function Carousel() {
     }, [currentImageIndex])
 
     return (
-        <div className="carousel-container w-full">
+        <div className="carousel-container lg:w-full">
             {/* Render only the current image */}
-            <div className="relative w-full h-[600px] overflow-hidden">
+            <div className="relative w-full lg:h-[600px] md:h-[500px] sm:h-[450px] h-[400px] overflow-hidden">
                 <img
                     src={images[currentImageIndex].src}
                     alt={images[currentImageIndex].alt}
