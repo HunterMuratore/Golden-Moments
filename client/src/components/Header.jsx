@@ -6,7 +6,6 @@ const links = [
     { name: 'About', to: '#about' },
     { name: 'Services', to: '#services' },
     { name: 'Reviews', to: '#reviews' },
-    { name: 'Contact', to: '#contact' },
 ]
 
 function Header() {
@@ -32,7 +31,7 @@ function Header() {
 
     return (
         <header className={`${isSticky ? 'sticky top-0 z-101' : 'absolute'} w-full`}>
-            <nav className={`${(isSticky || isOpen) ? 'background' : 'background-transparent'} flex items-center justify-between py-1 pl-4 pr-8 text-sm sm:text-md lg:text-lg`}>
+            <nav className={`${(isSticky || isOpen) ? 'background' : 'background-transparent'} flex items-center justify-between py-1 pl-4 pr-4 text-sm sm:text-md lg:text-lg`}>
                 <div className='logo'>
                     <a href="#"><img src={logo} alt="Golden Moments Logo" className='h-16 w-20'/></a>
                 </div>
@@ -81,6 +80,7 @@ function Header() {
                                 {link.name}
                             </a>
                         ))}
+                        <a href="mailto:info@goldenmomentsnj.com?subject=Inquiry" target="_blank" rel="noopener noreferrer"><button className="my-btn">Contact <i className="fas fa-arrow-up-right-from-square ml-1"></i></button></a>
                     </div>
                 </div>
             </nav>
@@ -92,6 +92,7 @@ function Header() {
                         {link.name}
                     </a>
                 ))}
+                <a href="mailto:info@goldenmomentsnj.com?subject=Inquiry" target="_blank" rel="noopener noreferrer">Contact <i className="fas fa-arrow-up-right-from-square ml-1"></i></a>
             </nav>
         </header>
     )
