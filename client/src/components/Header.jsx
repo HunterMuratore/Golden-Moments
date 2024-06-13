@@ -32,7 +32,7 @@ function Header() {
 
     return (
         <header className={`${isSticky ? 'sticky top-0 z-101' : 'absolute'} w-full`}>
-            <nav className={`${(isSticky || isOpen) ? 'background' : 'background-transparent'} flex items-center justify-between py-1 pl-4 pr-8 text-sm sm:text-md lg:text-lg`}>
+            <nav className={`${(isSticky || isOpen) ? 'background' : 'background-transparent'} flex items-center justify-between py-1 pl-4 pr-4 text-sm sm:text-md lg:text-lg`}>
                 <div className='logo'>
                     <a href="#"><img src={logo} alt="Golden Moments Logo" className='h-16 w-20'/></a>
                 </div>
