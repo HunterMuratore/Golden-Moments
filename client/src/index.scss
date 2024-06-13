@@ -2,3 +2,205 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* VARIABLES */
+$theme-dark: #050505;
+$theme-med: #2b2b2b;
+$theme-accent: #c2a23b;
+$theme-text: #EEEEEE;
+$main-padding: 0 5%;
+
+/* KEYFRAMES */
+@keyframes colorChange {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+/* RESETS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.4;
+    font-family: sans-serif;
+}
+
+html,
+body,
+#root {
+    min-height: 100%;
+    height: 100%;
+    color: $theme-text;
+}
+
+/* GLOBAL CLASSES */
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+body {
+    height: fit-content;
+    background-color: $theme-dark;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.main-padding {
+    padding: $main-padding;
+}
+
+.my-btn,
+.my-btn:active,
+.my-btn:focus,
+.my-btn.focus {
+    background-color: $theme-accent !important;
+    transition: background-color 0.3s ease-in-out;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    color: $theme-text;
+
+    &:hover,
+    &.open {
+        background-color: darken($theme-accent, 7%) !important;
+        color: $theme-text;
+    }
+}
+
+/* CUSTOM CLASSES */
+header {
+    z-index: 100;
+
+    .background {
+        background-color: $theme-accent;
+        transition: background-color 0.3s ease-in-out;
+        box-shadow: -1px 1px 6px rgba(255, 255, 255, 0.3);
+        border: 1px solid $theme-dark;
+    }
+
+    .dropdown-background {
+        background-color: rgba($theme-accent, 0.95);
+        transition: background-color 0.3s ease-in-out;
+        box-shadow: -1px 1px 6px rgba(255, 255, 255, 0.3);
+        border: 1px solid $theme-dark;
+    }
+
+    .background-transparent {
+        transition: background-color box-shadow 0.3s ease-in-out;
+    }
+
+    nav {
+        :not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+}
+
+.home {
+    h1 {
+        animation: colorChange 8s linear infinite;
+        background: linear-gradient(to right, #c9ac4d, #c8c8c8, #ae9235, #c9ac4d);
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-weight: 700;
+    }
+
+    .carousel {
+        max-width: 1200px;
+
+        .carousel-img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            width: 12px;
+            height: 12px;
+            background-color: #333;
+        }
+    }
+}
+
+.reviews {
+    .testimonies {
+        .testi {
+            height: 250px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: -4px 4px 5px rgba(255, 255, 255, 0.3);
+        }
+
+        blockquote {
+            font-size: 0.9rem;
+            font-style: italic;
+            text-align: center;
+            color: #000000;
+            margin: 0 10px;
+        }
+
+        p {
+            font-weight: bold;
+            color: #333333;
+            margin-top: 5px;
+            font-size: 30px;
+        }
+
+        .testies-zone {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .arrow-button {
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .arrow-button:hover {
+            color: gray;
+        }
+    }
+}
