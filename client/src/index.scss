@@ -9,6 +9,17 @@ $theme-accent: #c2a23b;
 $theme-text: #EEEEEE;
 $main-padding: 0 5%;
 
+/* KEYFRAMES */
+@keyframes colorChange {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
 /* RESETS */
 * {
     margin: 0;
@@ -101,7 +112,13 @@ header {
 
 .home {
     h1 {
-        font-weight: bold;
+        animation: colorChange 8s linear infinite;
+        background: linear-gradient(to right, #c9ac4d, #c8c8c8, #ae9235, #c9ac4d);
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
     }
 
     h2 {
@@ -185,11 +202,5 @@ header {
         .arrow-button:hover {
             color: gray;
         }
-    }
-}
-
-footer {
-    p {
-        font-size: 12px;
     }
 }
