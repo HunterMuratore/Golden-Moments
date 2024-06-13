@@ -2,7 +2,6 @@ import Home from './Home'
 import About from './About'
 import Services from './Services'
 import Reviews from './Reviews'
-import Contact from './Contact'
 
 function Landing() {
     return (
@@ -11,7 +10,6 @@ function Landing() {
             <About />
             <Services />
             <Reviews />
-            <Contact />
         </div>
     )
 }

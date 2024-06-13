@@ -6,7 +6,6 @@ const links = [
     { name: 'About', to: '#about' },
     { name: 'Services', to: '#services' },
     { name: 'Reviews', to: '#reviews' },
-    { name: 'Contact', to: '#contact' },
 ]
 
 function Header() {
@@ -81,6 +80,7 @@ function Header() {
                                 {link.name}
                             </a>
                         ))}
+                        <a href="mailto:info@goldenmomentsnj.com?subject=Inquiry" target="_blank" rel="noopener noreferrer"><button className="my-btn">Contact <i className="fas fa-arrow-up-right-from-square ml-1"></i></button></a>
                     </div>
                 </div>
             </nav>
@@ -92,6 +92,7 @@ function Header() {
                         {link.name}
                     </a>
                 ))}
+                <a href="mailto:info@goldenmomentsnj.com?subject=Inquiry" target="_blank" rel="noopener noreferrer">Contact <i className="fas fa-arrow-up-right-from-square ml-1"></i></a>
             </nav>
         </header>
     )
