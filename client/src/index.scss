@@ -138,6 +138,56 @@ header {
     }
 }
 
+.reviews {
+    .testimonies {
+        .testi {
+            height: 250px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: -4px 4px 5px rgba(255, 255, 255, 0.3);
+        }
+
+        blockquote {
+            font-size: 0.9rem;
+            font-style: italic;
+            text-align: center;
+            color: #000000;
+            margin: 0 10px;
+        }
+
+        p {
+            font-weight: bold;
+            color: #333333;
+            margin-top: 5px;
+            font-size: 30px;
+        }
+
+        .testies-zone {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .arrow-button {
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .arrow-button:hover {
+            color: gray;
+        }
+    }
+}
+
 footer {
     p {
         font-size: 12px;
