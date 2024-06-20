@@ -1,72 +1,86 @@
 import { animated } from 'react-spring'
+import { useMediaQuery } from 'react-responsive'
 
 import useScrollFadeIn from '../hooks/useScrollFadeIn.jsx'
 
-import img1 from '../assets/images/img1.jpg'
-import img2 from '../assets/images/img2.jpg'
-import img3 from '../assets/images/img3.jpg'
-import img4 from '../assets/images/img4.jpg'
+import birthday_cake from '../assets/images/birthday_cake.jpg'
+import buffet from '../assets/images/buffet.jpeg'
+import buffet2 from '../assets/images/buffet.png'
+import catering from '../assets/images/catering.jpg'
+import escape_room from '../assets/images/escape_room.jpg'
+import event_consultation from '../assets/images/event_consultation.jpg'
+import foam_party from '../assets/images/foam_party.jpg'
+import kiddish from '../assets/images/kiddish.jpg'
+import ice_cream from '../assets/images/ice_cream.jpg'
+import laser_tag from '../assets/images/laser_tag.jpg'
+import photo_booth from '../assets/images/photo_booth.jpg'
+import serving from '../assets/images/serving.jpg'
+import shabbat from '../assets/images/shabbat.jpg'
+import setting_table from '../assets/images/setting_table.jpg'
+import silent_dj from '../assets/images/silent_dj.jpg'
+import graduation from '../assets/images/graduation.jpg'
+import chair from '../assets/images/chair.jpg'
 
 const services = [
     {
-        name: 'Service 1',
-        image: img1
+        name: 'Catering',
+        image: catering
     },
     {
-        name: 'Service 2',
-        image: img2
+        name: 'Serving / Clean up',
+        image: serving
     },
     {
-        name: 'Service 3',
-        image: img3
+        name: 'Event Consultation',
+        image: event_consultation
     },
     {
-        name: 'Service 4',
-        image: img4
+        name: 'Foam Parties',
+        image: foam_party
     },
     {
-        name: 'Service 5',
-        image: img1
+        name: 'Kiddish Luncheons',
+        image: kiddish
     },
     {
-        name: 'Service 6',
-        image: img2
+        name: 'Silent DJ',
+        image: silent_dj
     },
     {
-        name: 'Service 7',
-        image: img3
+        name: 'Shabbat Dinners',
+        image: shabbat
     },
     {
-        name: 'Service 8',
-        image: img4
+        name: 'Kosher Buffets',
+        image: buffet
     },
     {
-        name: 'Service 9',
-        image: img1
+        name: 'Laser Tag',
+        image: laser_tag
     },
     {
-        name: 'Service 10',
-        image: img2
+        name: 'Birthday Parties',
+        image: birthday_cake
     },
     {
-        name: 'Service 11',
-        image: img3
+        name: 'Ice Cream Truck',
+        image: ice_cream
     },
     {
-        name: 'Service 12',
-        image: img4
+        name: 'Graduation Parties',
+        image: graduation
     },
     {
-        name: 'Service 13',
-        image: img2
+        name: 'Photo Booth',
+        image: photo_booth
     },
     {
-        name: 'Service 14',
-        image: img3
+        name: 'Escape Room',
+        image: escape_room
     },
     {
-        name: 'Service 15',
-        image: img4
+        name: 'Chair Rental',
+        image: chair
     },
 ]
 
@@ -85,6 +99,7 @@ const columnClasses = [
     'col-span-1 md:col-span-1 lg:col-span-1', // Service 12
     'col-span-1 md:col-span-1 lg:col-span-1', // Service 13
     'col-span-1 md:col-span-1 lg:col-span-1', // Service 14
+    'col-span-1 md:col-span-1 lg:col-span-1', // Service 15
     'col-span-1 md:col-span-1 lg:col-span-1', // Service 15
 ]
 
@@ -110,12 +125,15 @@ function ServiceCard({ service }) {
 }
 
 function Services() {
+    const isSmallScreen = useMediaQuery({ maxWidth: 640 })
+    const visibleServices = isSmallScreen ? services.slice(0, 5) : services
+
     return (
         <section id="services" className="services main-padding my-20">
             <h1 className="font-bold sm:text-[42px] text-[36px]">Services</h1>
             <h2 className="font-semibold sm:text-[20px] text-[16px] pl-3 mb-5">Subtitle if needed</h2>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-                {services.map((service, index) => (
+                {visibleServices.map((service, index) => (
                     <div key={index} className={columnClasses[index]}>
                         <ServiceCard service={service} className={columnClasses[index]} />
                     </div>
