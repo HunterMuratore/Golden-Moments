@@ -11,7 +11,7 @@ import escape_room from '../assets/images/escape_room.jpg'
 import event_consultation from '../assets/images/event_consultation.jpg'
 import foam_party from '../assets/images/foam_party.jpg'
 import kiddish from '../assets/images/kiddish.jpg'
-import ice_cream from '../assets/images/ice_cream.jpg'
+import ice_cream from '../assets/images/ice_cream_2.jpg'
 import laser_tag from '../assets/images/laser_tag.jpg'
 import photo_booth from '../assets/images/photo_booth.jpg'
 import serving from '../assets/images/serving.jpg'
@@ -35,16 +35,8 @@ const services = [
         image: event_consultation
     },
     {
-        name: 'Foam Parties',
-        image: foam_party
-    },
-    {
         name: 'Kiddish Luncheons',
         image: kiddish
-    },
-    {
-        name: 'Silent DJ',
-        image: silent_dj
     },
     {
         name: 'Shabbat Dinners',
@@ -53,6 +45,14 @@ const services = [
     {
         name: 'Kosher Buffets',
         image: buffet
+    },
+    {
+        name: 'Silent DJ',
+        image: silent_dj
+    },
+    {
+        name: 'Foam Parties',
+        image: foam_party
     },
     {
         name: 'Laser Tag',
@@ -81,6 +81,29 @@ const services = [
     {
         name: 'Chair Rental',
         image: chair
+    },
+]
+
+const servicesSmall = [
+    {
+        name: 'Catering',
+        image: catering
+    },
+    {
+        name: 'Silent DJ',
+        image: silent_dj
+    },
+    {
+        name: 'Foam Parties',
+        image: foam_party
+    },
+    {
+        name: 'Laser Tag',
+        image: laser_tag
+    },
+    {
+        name: 'Ice Cream Truck',
+        image: ice_cream
     },
 ]
 
@@ -126,14 +149,13 @@ function ServiceCard({ service }) {
 
 function Services() {
     const isSmallScreen = useMediaQuery({ maxWidth: 640 })
-    const visibleServices = isSmallScreen ? services.slice(0, 5) : services
 
     return (
         <section id="services" className="services main-padding my-20">
             <h1 className="font-bold sm:text-[42px] text-[36px]">Services</h1>
-            <h2 className="font-semibold sm:text-[20px] text-[16px] pl-3 mb-5">Subtitle if needed</h2>
+            <h2 className="font-semibold sm:text-[20px] text-[16px] pl-3 mb-5">From Elegant Catering to Exciting Parties, We Do It All</h2>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-                {visibleServices.map((service, index) => (
+                {(isSmallScreen ? servicesSmall : services).map((service, index) => (
                     <div key={index} className={columnClasses[index]}>
                         <ServiceCard service={service} className={columnClasses[index]} />
                     </div>

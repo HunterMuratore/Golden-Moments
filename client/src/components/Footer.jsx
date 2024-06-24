@@ -19,7 +19,7 @@ function Footer() {
                 </a>
 
                 {/* Email */}
-                <a href="mailto:info@goldenmomentsnj.com?subject=Inquiry" target="_blank" rel="noopener noreferrer">
+                <a href="mailto:eli.goldenmoments@yahoo.com?subject=Golden Moments Inquiry" target="_blank" rel="noopener noreferrer">
                     <i className="fa-regular fa-envelope fa-2xl"></i>
                 </a>
             </div>

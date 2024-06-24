@@ -81,6 +81,21 @@ a {
     }
 }
 
+.golden {
+    animation: colorChange 8s linear infinite;
+    background: linear-gradient(to right, #c9ac4d, #c8c8c8, #ae9235, #c9ac4d);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.accent {
+    color: #c9ac4d;
+    font-weight: 500;
+}
+
 /* CUSTOM CLASSES */
 header {
     z-index: 100;
@@ -111,16 +126,6 @@ header {
 }
 
 .home {
-    h1 {
-        animation: colorChange 8s linear infinite;
-        background: linear-gradient(to right, #c9ac4d, #c8c8c8, #ae9235, #c9ac4d);
-        background-size: 200%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 700;
-    }
-
     h2 {
         font-weight: 700;
     }
@@ -202,5 +207,12 @@ header {
         .arrow-button:hover {
             color: gray;
         }
+    }
+}
+
+.contact {
+    .email {
+        text-decoration: underline;
+        font-weight: bold;
     }
 }
