@@ -152,8 +152,8 @@ function Services() {
 
     return (
         <section id="services" className="services main-padding my-20">
-            <h1 className="font-bold sm:text-[42px] text-[36px]">Services</h1>
-            <h2 className="font-semibold sm:text-[20px] text-[16px] pl-3 mb-5">From Elegant Catering to Exciting Parties, We Do It All</h2>
+            <h1 className="font-bold sm:text-[52px] text-[36px]">Services</h1>
+            <h2 className="font-semibold sm:text-[24px] text-[16px] pl-3 mb-5">From Elegant Catering to Exciting Parties, We Do It All</h2>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
                 {(isSmallScreen ? servicesSmall : services).map((service, index) => (
                     <div key={index} className={columnClasses[index]}>
