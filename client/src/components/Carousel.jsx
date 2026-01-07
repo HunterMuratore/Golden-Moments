@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
 
 import catering from '../assets/images/catering.jpg'
-import foam_party from '../assets/images/foam_party.jpg'
+import graduation from '../assets/images/graduation.jpg'
 import laser_tag from '../assets/images/laser_tag.jpg'
 import silent_dj from '../assets/images/silent_dj.jpg'
 
 const images = [
     { src: catering, alt: 'Catering' },
-    { src: foam_party, alt: 'Foam Party' },
     { src: laser_tag, alt: 'Laser Tag' },
+    { src: graduation, alt: 'Graduation Parties' },
     { src: silent_dj, alt: 'Silent DJ Party' },
 ]
 

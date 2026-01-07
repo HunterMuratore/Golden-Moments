@@ -20,6 +20,7 @@ import setting_table from '../assets/images/setting_table.jpg'
 import silent_dj from '../assets/images/silent_dj.jpg'
 import graduation from '../assets/images/graduation.jpg'
 import chair from '../assets/images/chair.jpg'
+import video_montages from '../assets/images/video_montage.jpg'
 
 const services = [
     {
@@ -51,8 +52,8 @@ const services = [
         image: silent_dj
     },
     {
-        name: 'Foam Parties',
-        image: foam_party
+        name: 'Video Montages',
+        image: video_montages
     },
     {
         name: 'Laser Tag',
